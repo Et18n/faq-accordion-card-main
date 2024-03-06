@@ -67,14 +67,14 @@ body {
   h1 {
     margin-top: 6rem;
     font-weight: 700;
-    margin-bottom: 30pxx;
+    margin-bottom: 30px;
   }
   .question {
     text-align: left;
     font-size: 12px;
     margin-bottom: auto;
     margin-top: auto;
-    max-height: 30px;
+    /* max-height: 30px; */
     height: fit-content;
     /* display: block; */
     /* flex-direction: column; */
