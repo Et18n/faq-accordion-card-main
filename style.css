@@ -1,0 +1,133 @@
+@import url("https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@100..900&display=swap");
+:root {
+  /* ## Colors */
+
+  /* ###Primary */
+
+  /* #### Text */
+
+  --Very-dark-desaturated-blue: hsl(238, 29%, 16%);
+  --Soft-red: hsl(14, 88%, 65%);
+
+  /* #### Gradient */
+
+  /* Background gradient: */
+
+  --Soft-violet: hsl(273, 75%, 66%);
+  --Soft-blue: hsl(240, 73%, 65%);
+
+  /* ### Neutral */
+
+  /* #### Text */
+
+  --Very-dark-grayish-blue: hsl(237, 12%, 33%);
+  --Dark-grayish-blue: hsl(240, 6%, 50%);
+
+  /* #### Dividers */
+
+  --Light-grayish-blue: hsl(240, 5%, 91%);
+}
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  display: flex;
+  min-height: 100vh;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(hsl(273, 75%, 66%), hsl(240, 73%, 65%));
+  font-family: "kumbh sans";
+}
+.container {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  transform: translateY(2em);
+  margin: 1.5em;
+  width: 350px;
+  max-height: 30em;
+  height: 500px;
+  /* box-shadow: 0 10px 1em 10px rgb(0, 0, 0); */
+  justify-content: center;
+  background-color: white;
+  position: relative;
+  border-radius: 20px;
+  padding: 20px 20px;
+  .fullimg {
+    position: absolute;
+    width: 70%;
+    left: 50%;
+    top: 0;
+    transform: translateY(-90px) translateX(-50%);
+  }
+  h1 {
+    margin-top: 6rem;
+    font-weight: 700;
+    margin-bottom: 30pxx;
+  }
+  .question {
+    text-align: left;
+    font-size: 12px;
+    margin-bottom: auto;
+    margin-top: auto;
+    max-height: 30px;
+    height: fit-content;
+    /* display: block; */
+    /* flex-direction: column; */
+    cursor: pointer;
+  }
+  .q:hover {
+    color: var(--Soft-red);
+  }
+  .question::after {
+    content: "";
+    display: block;
+    border-bottom: solid 3px hsl(240, 5%, 91%);
+    margin-top: 10px;
+  }
+  .q {
+    display: flex;
+    justify-content: space-between;
+    font-weight: 500;
+  }
+  .btn {
+    width: 1.3rem;
+    height: 1rem;
+    transition: all linear 0.3s;
+  }
+}
+.ans {
+  /* position: absolute; */
+  margin-top: 10px;
+  margin-bottom: 10px;
+  font-size: 12px;
+  font-weight: 500;
+  color: var(--Very-dark-desaturated-blue);
+}
+.active {
+  color: black !important;
+  font-weight: 700;
+  font-size: 13px;
+}
+.hidden {
+  display: none;
+}
+.turn {
+  rotate: 180deg;
+}
+
+@media only screen and (min-width: 380px) {
+  .container {
+    width: 900px;
+  }
+  .fullimg {
+    position: absolute;
+    width: 50% !important;
+    left: 0;
+    top: 0;
+  }
+}
